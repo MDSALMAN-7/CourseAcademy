@@ -13,6 +13,7 @@ const Buy = () => {
     const user = JSON.parse(localStorage.getItem('user') || "{}"); // receiving token here
     const token = user?.token; // taking token from user 
      console.log(user)
+
     const handlePurchases = async () =>{
         if(!token){
             toast.error("Please login to purchase course.");
@@ -36,12 +37,13 @@ const Buy = () => {
             setLoading(false);
             if(error.response?.status===400){
                 toast.error(`You have already purchased this course`);
+                navigate("/purchases");
             }
             else{
                 toast.error(error?.response?.data?.errors);   // ?-> it using for if any error will not work then it safe to crashed our website
             }
         }
-    }
+    };
   return (
     <div className='flex h-screen justify-center items-center'>
         <button className='bg-blue-500 py-2 px-4 hover:bg-blue-800 text-white duration-300 rounded-md' onClick={handlePurchases} disabled={loading}>Buy now</button>
