@@ -5,6 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { BACKEND_URL } from "../utils/utils";
 
 const Buy = () => {
   const { courseId } = useParams(); // receiving id here form course.jsx file
@@ -34,7 +35,7 @@ const Buy = () => {
       try {
         // setLoading(true);
         const response = await axios.post(
-          `http://localhost:5001/api/v1/course/buy/${courseId}`,
+          `${BACKEND_URL}/course/buy/${courseId}`,
           {},
           {
             headers: {
@@ -129,7 +130,7 @@ const Buy = () => {
         status: paymentIntent.status,
       };
       console.log("Payment Info : ", paymentInfo);
-      await axios.post("http://localhost:5001/api/v1/order",paymentInfo,{
+      await axios.post(`${BACKEND_URL}/order`,paymentInfo,{
         headers: {
               Authorization: `Bearer ${token}`,
             },

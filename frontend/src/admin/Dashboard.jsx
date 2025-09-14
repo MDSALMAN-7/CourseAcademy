@@ -1,8 +1,22 @@
 import React from "react";
 import logo from "../../public/logo.webp";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { BACKEND_URL } from "../utils/utils";
 
 function Dashboard() {
+    const handleLogout = async () => {
+    try {
+      const response = await axios.get(`${BACKEND_URL}/admin/logout`, {
+        withCredentials: true,
+      });
+      localStorage.removeItem("admin");
+      toast.success(response.data.message);
+    } catch (error) {
+      console.log("Error in logging out ", error);
+      toast.error(error.response.data.errors || "Error in logging out");
+    }
+  };
   return (
     <div className="flex h-screen">
         {/* SideBar */}
@@ -28,7 +42,7 @@ function Dashboard() {
                     </button>
                 </Link>
                 <Link to="/admin/login">
-                    <button className="bg-yellow-400 w-full rounded py-2 text-white">
+                    <button onClick={handleLogout} className="bg-yellow-400 w-full rounded py-2 text-white">
                         Log Out
                     </button>
                 </Link>

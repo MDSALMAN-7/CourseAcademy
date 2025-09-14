@@ -3,6 +3,7 @@ import logo from "../../public/logo.webp";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { BACKEND_URL } from '../utils/utils';
 
 function AdminLogin() {
 
@@ -42,12 +43,12 @@ function AdminLogin() {
 //     }
 //   }
 
-    const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
   e.preventDefault(); // prevent browser refresh
 
   try {
     const response = await axios.post(
-      "http://localhost:5001/api/v1/admin/login",
+     ` ${BACKEND_URL}/admin/login`,
       {
         email,
         password,

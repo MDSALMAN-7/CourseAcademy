@@ -19,7 +19,7 @@ function Signup() {
     e.preventDefault();  // self brower will not refresh
     // console.log(e); 
     try {
-      const response = await axios.post("http://localhost:5001/api/v1/user/signup",{
+      const response = await axios.post(`${BACKEND_URL}/user/signup`,{
         firstName,
         lastName,
         email,
