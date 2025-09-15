@@ -224,8 +224,7 @@ export const buyCourses = async (req,res)=>{
         });
 
 
-        // const newPurchase = new Purchase({userId,courseId});
-        // await newPurchase.save();  // removing this code form here and pasting order controller.js
+        
         res.status(201).json({
             message:"Course purchased successFully...",
             // newPurchase,
