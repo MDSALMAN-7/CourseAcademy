@@ -89,7 +89,7 @@ function AdminLogin() {
             <header className='absolute top-0 left-0 w-full flex justify-between items-center p-5'>
                 <div className='flex items-center space-x-2'>
                     <img src={logo} alt="" className='w-10 h-10 rounded-full' />
-                    <h1 className='text-2xl text-orange-500 font-bold '>BCM</h1>
+                    <h1 className='text-2xl text-orange-500 font-bold '>CourseAcademy</h1>
                 </div>
                 <div className='space-x-4'>
                     <Link to={"/admin/signup"} className='bg-transparent text-white py-2 px-4 border border-white rounded'>Signup</Link>
@@ -99,7 +99,7 @@ function AdminLogin() {
 
             {/* Login Page */}
             <div className='w-[450px]  bg-gray-900 p-6 m-6  justify-center rounded-lg shadow-lg md:m-0' >
-              <h2 className='text-2xl font-bold text-center mb-4'>Welcome to <span className='text-orange-400'>CourseHeaven</span></h2> 
+              <h2 className='text-2xl font-bold text-center mb-4'>Welcome to <span className='text-orange-400'>CourseAcademy</span></h2> 
               <p className='text-gray-400 text-center mb-6'>Login to get paid courses</p>
 
               <form onSubmit={handleSubmit}>

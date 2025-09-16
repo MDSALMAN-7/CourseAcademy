@@ -100,7 +100,7 @@ function Home() {
             <header className='flex items-center justify-between p-6'>
                 <div className='flex items-center space-x-2'>
                     <img src={logo} alt="" className='w-10 h-10 rounded-full' />
-                    <h1 className='text-2xl text-orange-500 font-bold '>BCM</h1>
+                    <h1 className='text-2xl text-orange-500 font-bold '>CourseAcademy</h1>
                 </div>
                 <div className='space-x-4'>
                     {isLoggedIn ? (
@@ -117,9 +117,9 @@ function Home() {
  
             {/* Main section  */} 
             <section className='text-center py-20'>
-                <h1 className='text-4xl font-semibold text-orange-500'>Beginners Course Market</h1>
+                <h1 className='text-4xl font-semibold text-orange-500'>CourseAcademy</h1>
                 <br />
-                <p className='text-gray-500'>Lorem ipsum dolor sit amet.</p>
+                <p className='text-gray-500'>Build Your Dream with Us</p>
                 <div className='space-x-5 mt-6'> 
                     <Link to={"/courses"} className='bg-green-500 text-black rounded font-semibold hover:bg-white duration-300 hover:text-black py-2 px-3'>ExploreCourse</Link>
                     <Link to={""} className='bg-white text-black rounded font-semibold hover:bg-green-500 duration-300 hover:text-black py-2 px-3'>CourseVideo</Link>
@@ -153,7 +153,7 @@ function Home() {
                     <div className='flex flex-col items-center md:items-start'>
                         <div className='flex items-center space-x-2'>
                             <img src={logo} alt="" className='w-10 h-10 rounded-full' />
-                            <h1 className='text-2xl text-orange-500 font-bold '>BCM</h1>
+                            <h1 className='text-2xl text-orange-500 font-bold '>CourseAcademy</h1>
                         </div>
                         <div className='mt-4 ml-2 md:ml-8 '>
                             <p className='mb-2'>Follow Us</p>
@@ -168,9 +168,9 @@ function Home() {
                     <div className='items-center flex flex-col'>
                         <h3 className='text-lg mb-4 semi-bold'>Connects</h3>
                         <ul className='text-gray-400 space-y-2'>
-                            <li className='hover:text-white cursor-pointer duration-300'>youtube-learn coding</li>
-                            <li className='hover:text-white duration-300 cursor-pointer'>telegram-learn coding</li>
-                            <li className='hover:text-white cursor-pointer duration-300'>Github-learn coding</li>
+                            <li className='hover:text-white cursor-pointer duration-300'>youtube</li>
+                            <li className='hover:text-white duration-300 cursor-pointer'>telegram</li>
+                            <li className='hover:text-white cursor-pointer duration-300'>Github</li>
                         </ul>
                     </div>
 

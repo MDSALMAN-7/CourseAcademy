@@ -174,7 +174,7 @@ export const getCourses = async (req,res)=>{
     }
 };
 
-// this code is for taget "particular course"
+// this code is for taget "particular course" using Id
 export const courseDetails = async (req,res)=>{
     const {courseId} = req.params;
     try {
@@ -194,7 +194,7 @@ import Stripe from "stripe"  // importing stripe file
 import config from "../config.js";
 
 const stripe = new Stripe(config.STRIPE_SECRET_KEY)
-console.log(config.STRIPE_SECRET_KEY);
+// console.log(config.STRIPE_SECRET_KEY);
 
 // Buy Courses
 export const buyCourses = async (req,res)=>{
