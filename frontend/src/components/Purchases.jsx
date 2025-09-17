@@ -8,7 +8,7 @@ import { IoMdSettings } from "react-icons/io";
 import { IoLogIn, IoLogOut } from "react-icons/io5";
 import { RiHome2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { BACKEND_URL } from "../utils/utils";
+import { BACKEND_URL } from "../utils/utils.js";
 
 const Purchases = () => {
   const [purchases, setPurchases] = useState([]);

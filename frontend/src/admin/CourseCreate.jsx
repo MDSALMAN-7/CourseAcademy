@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import { BACKEND_URL } from '../utils/utils';
+import { BACKEND_URL } from '../utils/utils.js';
 
 function CourseCreate() {
   const [title,setTitle]=useState("");

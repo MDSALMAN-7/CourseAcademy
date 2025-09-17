@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../public/logo.webp";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { BACKEND_URL } from "../utils/utils";
+import { BACKEND_URL } from "../utils/utils.js";
 
 function Dashboard() {
     const handleLogout = async () => {

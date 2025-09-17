@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import toast from 'react-hot-toast';
-import { BACKEND_URL } from '../utils/utils';
+import { BACKEND_URL } from '../utils/utils.js';
 function Home() {
     const [courses,setCourses] = useState([]);
     const [isLoggedIn,setIsLoggedIn] = useState(false);

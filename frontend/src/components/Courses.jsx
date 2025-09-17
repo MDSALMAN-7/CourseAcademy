@@ -11,7 +11,7 @@ import { HiMenu, HiX } from "react-icons/hi"; // Import menu and close icons
 import logo from "../../public/logo.webp";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import { BACKEND_URL } from "../utils/utils";
+import { BACKEND_URL } from "../utils/utils.js";
 
 
 function Courses() {
