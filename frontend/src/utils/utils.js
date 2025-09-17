@@ -1,1 +1,1 @@
-export const BACKEND_URL="https://courseacademy-ehyj.onrender.com";
+export const BACKEND_URL="https://courseacademy-ehyj.onrender.com/api/vi";
