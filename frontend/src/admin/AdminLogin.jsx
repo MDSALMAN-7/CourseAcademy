@@ -20,7 +20,7 @@ function AdminLogin() {
 
   try {
     const response = await axios.post(
-     ` ${BACKEND_URL}/admin/login`,
+     `${BACKEND_URL}/admin/login`,
       {
         email,
         password,
