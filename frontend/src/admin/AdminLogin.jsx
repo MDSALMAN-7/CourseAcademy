@@ -15,34 +15,6 @@ function AdminLogin() {
 
   const navigate = useNavigate();
 
-//   const handleSubmit = async (e) =>{
-//     e.preventDefault();  // self brower will not refresh
-//     // console.log(e); 
-//     try {
-//       const response = await axios.post("http://localhost:5001/api/v1/admin/login",{
-//         email,
-//         password
-//       },{
-//         withCredentials:true,
-//         headers:{
-//           "Content-Type":"application/json", // data is coming of josn form
-//         },
-//       }
-//     );
-//     console.log("Login successfull...",response.data);
-//     toast.success(response.data.message);
-//     // sotring token in localstrogae
-//     navigate("/admin/dashboard");
-//     localStorage.setItem("admin",JSON.stringify(response.data));
-//     } catch (error) {
-//       if(error.response){
-//         // alert(error.response.data.errors);
-//         setErrorMessage(error.response.data.errors || "Login faild");
-
-//       }
-//     }
-//   }
-
   const handleSubmit = async (e) => {
   e.preventDefault(); // prevent browser refresh
 
@@ -103,8 +75,6 @@ function AdminLogin() {
               <p className='text-gray-400 text-center mb-6'>Login to get paid courses</p>
 
               <form onSubmit={handleSubmit}>
-               
-
                 <div className='mb-3'>
                   <label htmlFor="" className='text-gray mb-2'> Email</label>
                   <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} className='w-full p-2 bg-gray-800 borber border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md ' placeholder='abc@gamil.com' required />
