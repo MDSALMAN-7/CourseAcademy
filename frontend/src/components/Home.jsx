@@ -162,6 +162,9 @@ function Home() {
                                 <a href=""><FaInstagram  className='text-2xl hover:text-pink-600 duration-300' /></a>
                                 <a href=""><FaTwitter  className='text-2xl hover:text-blue-600 duration-300'/></a>
                             </div>
+                            <div className='mt-4'>
+                                <Link to="" className='bg-orange-500  p-2 rounded-lg'>Admin</Link>
+                            </div>
                         </div>
                     </div>
 
