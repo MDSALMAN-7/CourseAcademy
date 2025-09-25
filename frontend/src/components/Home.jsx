@@ -117,7 +117,7 @@ function Home() {
  
             {/* Main section  */} 
             <section className='text-center py-20'>
-                <h1 className='text-4xl font-semibold text-orange-500'>CourseAcademy</h1>
+                <h1 className='text-4xl font-semibold text-orange-500 hidden sm:bl'>CourseAcademy</h1>
                 <br />
                 <p className='text-gray-500'>Build Your Dream with Us</p>
                 <div className='space-x-5 mt-6'> 
@@ -147,12 +147,12 @@ function Home() {
 
             <hr />
 
-            {/* Footer  */}
+           {/* Footer  */}
             <footer className='my-8'>
-                <div className='grid grid-cols-1 md:grid-cols-3'>
-                    <div className='flex flex-col items-center md:items-start'>
-                        <div className='flex items-center space-x-2'>
-                            <img src={logo} alt="" className='w-10 h-10 rounded-full' />
+                <div className='grid grid-cols-1 md:grid-cols-3 '>
+                    <div className='  flex flex-col items-start md:items-start'>
+                        <div className='flex items-center space-x-2 '>
+                            <img src={logo} alt="" className='w-10 h-10 rounded-full ' />
                             <h1 className='text-2xl text-orange-500 font-bold '>CourseAcademy</h1>
                         </div>
                         <div className='mt-4 ml-2 md:ml-8 '>
@@ -168,7 +168,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className='items-center flex flex-col'>
+                    <div className='items-start md:items-center flex flex-col'>
                         <h3 className='text-lg mb-4 semi-bold'>Connects</h3>
                         <ul className='text-gray-400 space-y-2'>
                             <li className='hover:text-white cursor-pointer duration-300'>youtube</li>
@@ -177,7 +177,7 @@ function Home() {
                         </ul>
                     </div>
 
-                    <div className='items-center flex flex-col'>
+                    <div className='items-start md:items-center flex flex-col'>
                         <h3 className='text-lg mb-4 semi-bold'>Copyright © 2025</h3>
                         <ul className='text-gray-400 space-y-2'>
                             <li className='hover:text-white cursor-pointer duration-300'>Terms & Conditions</li>
