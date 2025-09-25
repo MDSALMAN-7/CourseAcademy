@@ -124,7 +124,7 @@ function Home() {
 
         {/* Main section  */}
         <section className="text-center py-20">
-          <h1 className="text-4xl font-semibold text-orange-500 hidden sm:bl">
+          <h1 className="text-4xl font-semibold text-orange-500">
             CourseAcademy
           </h1>
           <br />
