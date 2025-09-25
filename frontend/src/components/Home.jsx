@@ -13,6 +13,7 @@ import { BACKEND_URL } from "../utils/utils.js";
 function Home() {
   const [courses, setCourses] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [slidesToShow, setSlidesToShow] = useState();
 
   //token
   useEffect(() => {
@@ -57,40 +58,30 @@ function Home() {
     fetchCourses();
   }, []);
 
-  var settings = {
-    dots: true,
-    infinite: false,
+  //  Detect viewport width
+  useEffect(() => {
+    const updateSlides = () => {
+      const width = window.innerWidth;
+      if (width >= 1280) setSlidesToShow(4);
+      else if (width >= 1024) setSlidesToShow(3);
+      else if (width >= 768) setSlidesToShow(2);
+      else setSlidesToShow(1);
+    };
+
+    updateSlides(); // run on mount
+    window.addEventListener("resize", updateSlides);
+    return () => window.removeEventListener("resize", updateSlides);
+  }, []);
+
+  const settings = {
+    dots: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow,
     slidesToScroll: 1,
-    initialSlide: 0,
     autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
   };
 
   return (
@@ -154,26 +145,29 @@ function Home() {
           </div>
         </section>
 
+        {/* Slider */}
         <section>
           <Slider {...settings}>
-            {/* creating card */}
             {courses.map((course) => (
-              <div key={course._id} className="p-4">
-                <div className="relative flex-shrink-0 w-92 transition-transform duration-300 transform hover:scale-105">
-                  <div className="bg-gray-900 rounded-lg overflow-hidden">
+              <div key={course._id} className="p-3">
+                <div className="rounded-2xl relative flex-shrink-0 h-60 transition-transform duration-300 transform hover:scale-105 bg-gray-900 ">
+                  <div className="overflow-hidden">
                     <img
-                      className="h-32 w-full object-contain"
+                      className="h-25 items-center w-full object-contain"
                       src={course.image.url}
-                      alt=""
+                      alt={course.title}
                     />
-                    <div className="p-6 text-center">
-                      <h2 className="text-xl font-bold text-white">
-                        {course.title}
-                      </h2>
-                      <button className="mt-4 bg-orange-400 text-white px-4 py-2 rounded-full duration-300 hover:bg-blue-500">
-                        Enroll now
-                      </button>
-                    </div>
+                  </div>
+                  <div className="p-4 text-center">
+                    <h2 className="text-xl mb-8 font-bold text-white">
+                      {course.title}
+                    </h2>
+                    <Link
+                      to={`/courses`}
+                      className="mt-4 bg-orange-500 text-white py-3 px-5 rounded-3xl hover:bg-blue-500 duration-300 cursor-pointer"
+                    >
+                      Enroll Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -184,7 +178,7 @@ function Home() {
         <hr />
 
         {/* Footer  */}
-        <footer className="my-8 bg-gray-900 text-white px-6 py-6">
+        <footer className="my-8 text-white px-6 py-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
             {/* Logo & Socials */}
             <div className="flex flex-col items-start md:items-center text-left md:text-left">
