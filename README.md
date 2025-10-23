@@ -6,7 +6,7 @@ It provides a complete solution for creating, selling, and managing online cours
 It also includes a security module with features for user authentication, admin control, payments, and more.
 
 ##  Live Demo
-[https://course-selling-app-jade.vercel.app/](#) 
+https://course-academy-three.vercel.app/
 
 ## Features
 - **Frontend**: Built with React, providing a user-friendly interface.
